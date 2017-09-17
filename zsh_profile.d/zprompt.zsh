@@ -80,9 +80,7 @@ _default_color() {
 }
 
 _user_name() {
-  if [ $USER != "joshuaclayton" ]; then
-    echo "$USER "
-  fi
+  echo "$USER "
 }
 
 _separate()               { if [ -n "$1" ]; then echo " $1"; fi }

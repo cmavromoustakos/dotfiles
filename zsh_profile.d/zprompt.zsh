@@ -14,7 +14,7 @@ _git_prompt_info() {
   fi
 }
 
-_git_status() {
+_git_status_2() {
   git_status=$(cat "/tmp/git-status-$$")
   if [ -n "$(echo $git_status | grep "Changes not staged")" ]; then
     echo "changed"
@@ -44,7 +44,7 @@ _git_difference_from_track() {
 
 _git_prompt_color() {
   if [ -n "$1" ]; then
-    current_git_status=$(_git_status)
+    current_git_status=$(_git_status_2)
     if [ "changed" = $current_git_status ]; then
       echo "$(_red $1)"
     elif [ "pending" = $current_git_status ]; then

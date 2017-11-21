@@ -98,9 +98,9 @@ _colored_git_difference() { echo "$(_yellow "$(_git_difference_from_track)")" }
 
 _display_current_vim_mode() {
   if [[ $VIMODE == 'vicmd' ]]; then
-    echo "❌"
+    echo " ❌  "
   else
-    echo "✅"
+    echo " ✅  "
   fi
 }
 
@@ -132,21 +132,5 @@ _rprompt() {
   fi
 }
 
-_status_result() {
-  echo "%(?,"😊","🙁")"
-}
-
-_display_internet_connection_status() {
-  result=$(internet-status)
-
-  if [[ (($result -lt 2)) ]]; then
-    echo "👎"
-  elif [[ (($result == 2)) ]]; then
-    echo "👌"
-  else
-    echo "👍"
-  fi
-}
-
-PROMPT='$(_display_current_vim_mode) $(_status_result) $(_bracket_wrap "$(_basic)$(_separate $(_colored_git_branch))$(_separate $(_colored_git_difference))")'
+PROMPT='$(_display_current_vim_mode) $(_bracket_wrap "$(_basic)$(_separate $(_colored_git_branch))$(_separate $(_colored_git_difference))")'
 RPROMPT='$(_rprompt)'

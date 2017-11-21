@@ -10,4 +10,3 @@ export INTERNET_STATUS_LOG=/tmp/internet-status.log
 export NVM_DIR="$HOME/.nvm"
 
 touch $INTERNET_STATUS_LOG
-eval `docker-machine env 2>/dev/null`

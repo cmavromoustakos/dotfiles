@@ -1,7 +1,5 @@
 source $HOME/.aliasrc
 
-. "/usr/local/opt/nvm/nvm.sh"
-
 for zsh_source in $HOME/.zsh_profile.d/*.zsh; do
   source $zsh_source
 done
@@ -13,4 +11,3 @@ export PATH="$PATH:$HOME/.rvm/bin:$(brew --prefix qt@5.5)/bin"
 export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
 
 ssh-add
-eval `docker-machine env`

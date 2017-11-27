@@ -98,9 +98,9 @@ _colored_git_difference() { echo "$(_yellow "$(_git_difference_from_track)")" }
 
 _display_current_vim_mode() {
   if [[ $VIMODE == 'vicmd' ]]; then
-    echo " ❌  "
+    echo "$(_color "command" red)"
   else
-    echo " ✅  "
+    echo "$(_color "edit" green)"
   fi
 }
 
@@ -116,21 +116,4 @@ function precmd {
   $(git status 2> /dev/null >! "/tmp/git-status-$$")
 }
 
-_current_ruby() {
-  if [[ -n $rvm_path ]]; then
-    $rvm_path/bin/rvm-prompt
-  fi
-
-  if [[ -n $(rbenv version) ]]; then
-    rbenv version-name
-  fi
-}
-
-_rprompt() {
-  if [ $COLUMNS -gt 80 ]; then
-    echo "%{$fg[white]%}$(_current_ruby)%{$reset_color%}"
-  fi
-}
-
 PROMPT='$(_display_current_vim_mode) $(_bracket_wrap "$(_basic)$(_separate $(_colored_git_branch))$(_separate $(_colored_git_difference))")'
-RPROMPT='$(_rprompt)'

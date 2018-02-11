@@ -3,7 +3,8 @@
 :bulk_threshold: 1000
 :sources:
 - https://rubygems.org/
-- https://gus.mavromoustakos:AKCp5Z3qFPgzSR5dyL7yhhmzCifvAhyCHawfzoDn3Zw2NfZev4RMHpeH4Ty2Ufm2BZupMsQhQ@casecommons.jfrog.io/casecommons/api/gems/rubygems-local-dev/
+- https://gus.mavromoustakos:AKCp5ZkURsCyqTjkuNTB7wqyzy9sDeJKchRWiZZ53toHeHp55f41RjY1j6f9krNKamKondVZo@casecommons.jfrog.io/casecommons/api/gems/rubygems-local/
+- https://gus.mavromoustakos:AKCp5ZkURsCyqTjkuNTB7wqyzy9sDeJKchRWiZZ53toHeHp55f41RjY1j6f9krNKamKondVZo@casecommons.jfrog.io/casecommons/api/gems/rubygems-local-dev/
 :update_sources: true
 :verbose: true
 gem: "--no-ri --no-rdoc"

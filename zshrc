@@ -11,3 +11,4 @@ export PATH="$PATH:$HOME/.rvm/bin:$(brew --prefix qt@5.5)/bin"
 export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
 
 ssh-add
+export PATH="/usr/local/opt/sbt@0.13/bin:$PATH"

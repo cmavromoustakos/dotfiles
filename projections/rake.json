@@ -1,8 +1,0 @@
-{
-  "Rakefile": {
-    "type": "rakefile"
-  },
-  "lib/tasks/*.rake": {
-    "type": "task"
-  }
-}

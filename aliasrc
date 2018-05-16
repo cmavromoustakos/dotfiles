@@ -29,3 +29,6 @@ alias sand="cd ~/Sandbox"
 alias case-commons="cd ~/Sandbox/case-commons/"
 alias dotf="cd $HOME/.dotfiles"
 alias nvimconfig="cd ~/.config/nvim"
+
+# docker
+alias dc="docker-compose"

@@ -12,3 +12,7 @@ export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
 
 ssh-add
 export PATH="/usr/local/opt/sbt@0.13/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+

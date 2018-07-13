@@ -1,0 +1,18 @@
+#!/bin/bash
+tmux new-session -d -s dev -n cbp-dev-emulator
+tmux send-keys -t dev:cbp-dev-emulator "cd $HOME/Sandbox/case-commons/cbp-dev-emulator" Enter
+tmux send-keys -t dev:cbp-dev-emulator "docker-compose down && docker-compose up" Enter
+
+tmux new-window -n cbp-authentication-api
+tmux send-keys -t dev:cbp-authentication-api "cd $HOME/Sandbox/case-commons/cbp-authentication-api" Enter
+tmux send-keys -t dev:cbp-authentication-api "docker-compose down -v && docker-compose up" Enter
+
+tmux new-window -n cbp-authentication-web
+tmux send-keys -t dev:cbp-authentication-web "cd $HOME/Sandbox/case-commons/cbp-authentication-web" Enter
+tmux send-keys -t dev:cbp-authentication-web "docker-compose down && docker-compose up" Enter
+
+tmux new-window -n vim
+tmux send-keys -t dev:vim "cd $HOME/Sandbox/case-commons" Enter
+tmux send-keys -t dev:vim "vim ." Enter
+
+tmux attach -t dev:vim

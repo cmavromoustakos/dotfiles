@@ -19,3 +19,5 @@ powconfig
 unused.yml
 ctags
 projections
+gitconfig
+gitignore_global

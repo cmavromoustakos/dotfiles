@@ -12,3 +12,6 @@ export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/Sandbox/dotfiles/bin:$PATH"
 
 ssh-add
+
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"

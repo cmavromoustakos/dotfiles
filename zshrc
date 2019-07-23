@@ -15,3 +15,5 @@ ssh-add
 
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

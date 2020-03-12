@@ -1,5 +1,5 @@
 autoload -U compinit
-compinit
+compinit -u -d "${ZSH_COMPDUMP}"
 autoload -U +X bashcompinit && bashcompinit
 eval "$(stack --bash-completion-script stack)"
 

@@ -27,12 +27,12 @@ class Installer
 
     if !Dir.exist?(nvim_conf_dir)
       Dir.mkdir(nvim_conf_dir)
-
-      symlink(
-        File.join(pwd, "config/nvim/init.vim"),
-        File.join(ENV["HOME"], ".config", "nvim", "init.vim")
-      )
     end
+
+    symlink(
+      File.join(pwd, "config/nvim/init.vim"),
+      File.join(ENV["HOME"], ".config", "nvim", "init.vim")
+    )
   end
 end
 
@@ -44,14 +44,21 @@ end
 files = File.new(File.join(pwd, "MANIFEST"), "r").read.split("\n")
 
 desc "Install all dotfiles"
-task :install do
+task install: [:setup_nvim] do
   installer = Installer.new
 
   files.each do |file|
     installer.symlink(File.join(pwd, file), target_path(file))
   end
-  installer.setup_nvim
   #system "stack ghc -- -O2 -threaded bin/batt.hs"
+end
+
+desc "Setup nvim"
+task :setup_nvim do
+  puts "setting up nvim"
+  installer = Installer.new
+
+  installer.setup_nvim
 end
 
 desc "Remove all dotfies"

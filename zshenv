@@ -9,5 +9,7 @@ export HOMEBREW_SEARCH_CACHE_PATH=$HOME/.homebrew-search-cache
 export INTERNET_STATUS_LOG=/tmp/internet-status.log
 export NVM_DIR="$HOME/.nvm"
 export LOCAL_IP=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1')
+export DOCKER_CLIENT_TIMEOUT=120
+export COMPOSE_HTTP_TIMEOUT=120
 
 touch $INTERNET_STATUS_LOG

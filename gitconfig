@@ -31,3 +31,5 @@
 
 [core]
 	excludesfile = /Users/cmavromoustakos/.gitignore_global
+[merge]
+	tool = opendiff

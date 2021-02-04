@@ -21,3 +21,5 @@ ctags
 projections
 gitconfig
 gitignore_global
+gitignore
+gitconfig.common

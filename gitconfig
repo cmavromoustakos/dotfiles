@@ -33,3 +33,5 @@
 	excludesfile = /Users/cmavromoustakos/.gitignore_global
 [merge]
 	tool = opendiff
+[pull]
+	rebase = true

@@ -50,7 +50,6 @@ task install: [:setup_nvim] do
   files.each do |file|
     installer.symlink(File.join(pwd, file), target_path(file))
   end
-  #system "stack ghc -- -O2 -threaded bin/batt.hs"
 end
 
 desc "Setup nvim"

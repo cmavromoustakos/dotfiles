@@ -1,4 +1,5 @@
 typeset -U path # ensure unique paths within PATH
+
 export NODE_PATH=/usr/local/lib/node_modules
 export LANG=en_US.UTF-8
 export EDITOR=nvim
@@ -11,5 +12,6 @@ export NVM_DIR="$HOME/.nvm"
 export LOCAL_IP=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1')
 export DOCKER_CLIENT_TIMEOUT=240
 export COMPOSE_HTTP_TIMEOUT=240
+export GOPATH=$HOME/Sandbox/go
 
 touch $INTERNET_STATUS_LOG

@@ -8,3 +8,4 @@ vim/bundle
 nvim/plugged
 nvim/session
 nvim/autoload
+Brewfile.lock.json

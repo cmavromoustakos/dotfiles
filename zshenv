@@ -13,5 +13,6 @@ export LOCAL_IP=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep 
 export DOCKER_CLIENT_TIMEOUT=240
 export COMPOSE_HTTP_TIMEOUT=240
 export GOPATH=$HOME/Sandbox/go
+export GOBIN=$HOME/Sandbox/go/bin
 
 touch $INTERNET_STATUS_LOG

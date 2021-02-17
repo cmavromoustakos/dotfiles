@@ -10,11 +10,12 @@ cd_to_most_recently_opened_directory
 export PATH="/usr/local/opt/sbt@0.13/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/Sandbox/dotfiles/bin:$PATH"
+export PATH="$GOBIN:$PATH"
 
 ssh-add
 
 export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

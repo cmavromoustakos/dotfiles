@@ -12,7 +12,7 @@ brew "wget"
 brew "yq"
 brew "bench"
 brew "fzf"
-brew "docker"
+cask "docker"
 
 # shell
 brew "reattach-to-user-namespace"
@@ -38,8 +38,8 @@ tap "homebrew/cask"
 cask "chromedriver"
 cask "ngrok"
 cask "kitty"
-brew "visual-studio-code"
-
+cask "visual-studio-code"
+brew "nvm"
 
 # databases
 brew "postgresql"
@@ -47,7 +47,7 @@ brew "sqlite"
 brew "redis"
 
 # Utilities
-brew "iterm2"
-brew "notion"
-brew "sketch"
-brew "sizeup"
+cask "iterm2"
+cask "notion"
+cask "sketch"
+cask  "sizeup"

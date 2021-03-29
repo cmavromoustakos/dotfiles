@@ -1,6 +1,6 @@
 [user]
 	email = cmavromoustakos@gmail.com
-  name = Constantinos (Gus) Mavromoustakos
+	name = Constantine (Gus) Mavromoustakos
 
 [alias]
 	b = branch
@@ -35,3 +35,8 @@
 	tool = opendiff
 [pull]
 	rebase = true
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process

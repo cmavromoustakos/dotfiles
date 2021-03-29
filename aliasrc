@@ -33,3 +33,6 @@ alias nvimconfig="cd ~/.config/nvim"
 
 # docker
 alias dc="docker-compose"
+
+# Kubernetes
+alias kube="kubectl"
